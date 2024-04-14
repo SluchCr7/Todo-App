@@ -1,0 +1,217 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--Very-Light-Gray);
+}
+:root{
+    --Bright-Blue: hsl(220, 98%, 61%);
+    --Check-Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+}
+html{
+    font-size: 18px;
+}
+.light_theme{
+--Very-Light-Gray: hsl(0, 0%, 98%);
+--Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+--Light-Grayish-Blue: hsl(233, 11%, 84%);
+--Dark-Grayish-Blue: hsl(236, 9%, 61%);
+--Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+--Very-Dark-Grayish-Blue_text: hsl(235, 19%, 35%);
+    /* background: url(images/bg-desktop-light.jpg); */
+}
+.dark_mode{
+--Very-Light-Gray: hsl(235, 21%, 11%);
+--Very-Light-Grayish-Blue: hsl(235, 24%, 19%);
+--Light-Grayish-Blue: hsl(234, 39%, 85%);
+--Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+--Dark-Grayish-Blue: hsl(234, 11%, 52%);
+--Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+--Very-Dark-Grayish-Blue_text: hsl(235, 22%, 56%);
+    /* background: url(images/bg-d
+    esktop-dark.jpg); */
+}
+.App{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+.Top_App{
+    width: 100%;
+    height: 30%;
+    background: url(images/bg-desktop-light.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.Top_App div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    margin: auto;
+    padding-top: 2rem;
+}
+.Top_App div .title{
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: var(--Very-Light-Gray);
+}
+.icontheme{
+    cursor: pointer;
+    color: var(--Very-Light-Gray);
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+.body_todoApp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 600px;
+    position: relative;
+    gap: 10px;
+    bottom: 120px;
+}
+.taskInput{
+    width: 600px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--Very-Light-Gray);
+    outline: none;
+    border: none;
+    height: 60px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--Light-Grayish-Blue);
+    /* box-shadow: 0 10px 0 var(--Very-Light-Gray); */
+}
+.Input button{
+    width: 120px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--Very-Light-Gray);
+    outline: none;
+    border: none;
+    height: 60px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.Tasks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    position: relative;
+    bottom: 80px;
+    height: fit-content;
+    gap: 10px;
+    border-radius: 5px;
+    background-color: var(--Very-Light-Gray);
+    box-shadow: 0 10px 0 var(--Very-Light-Gray);
+}
+.Task{
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    background-color: var(--Very-Light-Gray);
+    box-shadow: 0 10px 0 var(--Very-Light-Gray);
+    border-bottom: 1px solid var(--Light-Grayish-Blue);
+}
+.TaskContent_left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.TaskContent_left i{
+    color: var(--Dark-Grayish-Blue);
+    cursor: pointer;
+}
+.end{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px;
+}
+.text_items_length{
+    font-size: .7rem;
+    font-weight: 700;
+    color: var(--Dark-Grayish-Blue);
+}
+.clear{
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--Dark-Grayish-Blue);
+    cursor: pointer;
+}
+.filter{
+    font-size: .9rem;
+    font-weight: 700;
+    color: var(--Dark-Grayish-Blue);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.active{
+    color: var(--Bright-Blue);
+}
+.text{
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--Very-Dark-Grayish-Blue_text);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 10px;
+}
+.line{
+    text-decoration: line-through;
+}
+.taskscontainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .Tasks{
+        width: 90%;
+    }
+    .Input{
+        width: 423px;
+    }
+    .Top_App div{
+        width: 90%;
+    }
+    .Top_App{
+        background: url(images/bg-mobile-light.jpg) no-repeat center cover; 
+    }
+}
